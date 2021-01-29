@@ -1,0 +1,23 @@
+cd C:\Users\rohit\Desktop\FALL2K19\pdc project\src
+C:
+
+set PATH=C:\Java\jdk1.8.0\bin
+
+javac client\ATM.java
+
+javac server\*.java
+
+rmiregistry 7777
+
+java -Djava.security.policy=all.policy server.Bank 7777
+
+java client.ATM localhost 7777 login user1 pass1
+
+
+java client.ATM localhost 7777 inquiry 88769912 625107
+
+java client.ATM localhost 7777 deposit 88769912 1000 359324
+
+java client.ATM localhost 7777 withdraw 88769912 540 359324
+
+java client.ATM localhost 7777 statement 88769912 10/29/2018 10/29/2018 359324
